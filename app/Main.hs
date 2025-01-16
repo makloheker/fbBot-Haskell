@@ -89,7 +89,7 @@ handleMessage senderPsid _ = callSendApi senderPsid "only text"
 
 main :: IO ()
 main = Scotty.scotty 4567 $ do
-    Scotty.get "/beranda.php" $ Scotty.text "test doang"
+    Scotty.get "/home" $ Scotty.text "test doang"
 
     Scotty.post "/webhook" $ do
         body <- Scotty.body
